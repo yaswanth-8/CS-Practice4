@@ -43,12 +43,30 @@ namespace CS_Practice4
     class Lambda { 
         public Lambda()
         {
-            List <int> nums = new List<int>() { 1,2,3,4,5};
+            List <int> nums = new List<int>() { 1,2,3,4,5,6,7,8,9,10};
             var square = (int x) => x * x;
             foreach(int x in nums)
             {
                 Console.WriteLine(square(x));
             }
+            Console.WriteLine("----------------------");
+            List<int> DivisibleBy5 = nums.FindAll((n) => (n % 2 == 0));
+            
+            foreach(int n in DivisibleBy5)
+            {
+                Console.WriteLine(n);
+            }
+            Console.WriteLine("----------------------");
+            Dictionary<string,int> myDict = new Dictionary<string,int>();
+            myDict.Add("a", 1);
+            myDict.Add("b", 6);
+            myDict.Add("e", 3);
+            myDict.Add("d", 4);
+            foreach(var x in myDict.OrderBy(x=>x.Value).ToList())
+            {
+                Console.WriteLine(x.Key+x.Value);
+            }
+
         }
     }
 
