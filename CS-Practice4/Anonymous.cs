@@ -16,14 +16,27 @@ namespace CS_Practice4
         
     }
 
-    delegate int add(int a,int b);
+    delegate int math(int a,int b);
     class lamda
     {
         public lamda()
         {
-            //int num = 1, num2 = 2;
-            add sum = (num1, num2) => { return num1 + num2; };
-            Console.WriteLine(sum(2, 3));
+            var sum = (int num1,int num2) => {
+                return (num1 + num2);
+                };
+            var sub = (int num1, int num2) => {
+                return (num1 - num2);
+            };
+
+            sum += sub;
+            Delegate[] arr = sum.GetInvocationList();
+            foreach(Delegate a in arr)
+            {
+                Console.WriteLine(a.DynamicInvoke(3, 4));
+            }
+
+
+            //Console.WriteLine(sum(2, 3));
         }
     }
 }
