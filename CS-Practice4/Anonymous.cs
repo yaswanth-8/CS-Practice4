@@ -17,9 +17,9 @@ namespace CS_Practice4
     }
 
     delegate int math(int a,int b);
-    class lamda
+    class delegateLambda
     {
-        public lamda()
+        public delegateLambda()
         {
             var sum = (int num1,int num2) => {
                 return (num1 + num2);
@@ -39,4 +39,17 @@ namespace CS_Practice4
             //Console.WriteLine(sum(2, 3));
         }
     }
+
+    class Lambda { 
+        public Lambda()
+        {
+            List <int> nums = new List<int>() { 1,2,3,4,5};
+            var square = (int x) => x * x;
+            foreach(int x in nums)
+            {
+                Console.WriteLine(square(x));
+            }
+        }
+    }
+
 }

@@ -9,6 +9,6 @@ class Program
         DoSum addIt = delegates.Sum;
         addIt(2, 3);*/
         //Anonymous anonymous = new Anonymous(); 
-        lamda lamda = new lamda(); //in anonymous file
+        Lambda lamda = new Lambda(); //in anonymous file
     }
 }
