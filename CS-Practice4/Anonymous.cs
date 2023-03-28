@@ -10,27 +10,9 @@ namespace CS_Practice4
     internal class Anonymous
     {
         public Anonymous() {
-            mathOperations d1 = add;
-            d1 += diff;
-            d1 += mul;
-            Delegate[] arr = d1.GetInvocationList();    
-            foreach(mathOperations d in arr)
-            {
-                d(2, 3);
-            }
-            
+            mathOperations dAdd = delegate (int a, int b) { Console.WriteLine( a + b); };
+            dAdd(2, 6);
         }
-        public static void add(int x, int y)
-        {
-            Console.WriteLine(x + y);
-        }
-        public static void diff(int x, int y)
-        {
-            Console.WriteLine(x - y);
-        }
-        public static void mul(int x, int y)
-        {
-            Console.WriteLine(x * y);
-        }
+        
     }
 }
