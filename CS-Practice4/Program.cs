@@ -5,8 +5,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        delegates del = new delegates();
+        /*delegates del = new delegates();
         DoSum addIt = delegates.Sum;
-        addIt(2, 3);
+        addIt(2, 3);*/
+        Anonymous anonymous = new Anonymous(); 
     }
 }
