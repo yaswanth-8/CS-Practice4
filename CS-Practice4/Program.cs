@@ -8,6 +8,7 @@ class Program
         /*delegates del = new delegates();
         DoSum addIt = delegates.Sum;
         addIt(2, 3);*/
-        Anonymous anonymous = new Anonymous(); 
+        //Anonymous anonymous = new Anonymous(); 
+        lamda lamda = new lamda(); //in anonymous file
     }
 }

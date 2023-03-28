@@ -15,4 +15,15 @@ namespace CS_Practice4
         }
         
     }
+
+    delegate int add(int a,int b);
+    class lamda
+    {
+        public lamda()
+        {
+            //int num = 1, num2 = 2;
+            add sum = (num1, num2) => { return num1 + num2; };
+            Console.WriteLine(sum(2, 3));
+        }
+    }
 }
