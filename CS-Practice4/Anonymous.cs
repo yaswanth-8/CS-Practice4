@@ -66,7 +66,17 @@ namespace CS_Practice4
             {
                 Console.WriteLine(x.Key+x.Value);
             }
-
+            Console.WriteLine("----------------------");
+            Dictionary<string, int[]> myDict1 = new Dictionary<string, int[]>();
+            
+            myDict1.Add("a", new int[] { 4, 2, 3 } );
+            myDict1.Add("b", new int[] { 4, 1, 6 });
+           
+            foreach (var x in myDict1.OrderBy(x => x.Value[0] + x.Value[1] ).ToList())
+            {
+                Console.WriteLine($"[{string.Join(",",x.Value)}]");
+            }
+            Console.WriteLine("----------------------");
         }
     }
 
