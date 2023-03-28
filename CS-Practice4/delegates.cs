@@ -12,12 +12,18 @@ namespace CS_Practice4
         public delegates (){
 
             DoSum add = Sum;
-            add(2,6);
+            performSum(add, 2, 6);
+
         }
 
         public static void Sum(int x, int y)
         {
             Console.WriteLine("Sum is "+( x + y));
+        }
+
+        public static void performSum(DoSum doSum,int x,int y)
+        {
+            doSum(x,y);
         }
     }
    
