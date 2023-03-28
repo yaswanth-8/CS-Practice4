@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CS_Practice4
 {
-    delegate void DoSum(int x, int y);
-    internal class delegates
+     delegate void DoSum(int x, int y);
+    class delegates
     {
         public delegates (){
 
