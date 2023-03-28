@@ -77,7 +77,24 @@ namespace CS_Practice4
                 Console.WriteLine($"[{string.Join(",",x.Value)}]");
             }
             Console.WriteLine("----------------------");
+
+            int[] ints = new int[] { 7,1, 2, 3 };
+            Array.Sort(ints);
+            Console.WriteLine(string.Join(", ", ints));
+
+            Console.WriteLine("----------------------");
         }
     }
+
+    class Student {
+    
+        public string name { get; set; }
+        public int id { get; set; }
+        public string dept { get; set; }
+        public int age { get; set; }
+
+    
+    }
+
 
 }
