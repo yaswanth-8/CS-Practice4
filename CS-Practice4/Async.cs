@@ -10,13 +10,69 @@ namespace CS_Practice4
     {
         public AsyncClass()
         {
-           // Firstmethod();
-           
-            Thirdmethod();
-            Secondmethod();
-            Fourthmethod();
+            // Firstmethod();
+            /*
+             Thirdmethod();
+             Secondmethod();
+             Fourthmethod();
+             Console.ReadLine();*/
+
+
+            iteratingFunction();
+            printingFunction();
             Console.ReadLine();
         }
+
+        static async void iteratingFunction()
+        {
+            await Task.Run(async () =>
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    await Task.Delay(200);
+                    Console.WriteLine("from iterating function " + i);
+                }
+
+            });
+            
+        }
+
+        static async void printingFunction()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+               await Task.Delay(200);
+                Console.WriteLine("Printing function");
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public static async void Firstmethod()
         {
