@@ -22,11 +22,19 @@ namespace CS_Practice4
                         printingFunction();
                         Console.ReadLine();*/
 
-             openFile();
+            //openFile();
+            call();
+            
             Console.ReadLine();
 
         }
-
+        public static async void call()
+        {
+            Task t1 = Firstmethod();
+            Task t2 = Secondmethod();
+            await Task.WhenAll(t1, t2);
+            Fourthmethod();
+        }
 
          async void openFile()
         {
@@ -36,9 +44,7 @@ namespace CS_Practice4
 
                Console.WriteLine("inside run");
                FileStream fs = new FileStream("D:\\C#\\file1.txt", FileMode.OpenOrCreate);
-
                Console.WriteLine("File1 is opened");
-
                writeFile(fs);
            
            });
@@ -49,8 +55,8 @@ namespace CS_Practice4
         public void writeFile(FileStream fs)
         {
             StreamWriter sw = new StreamWriter(fs);
-            sw.Write("Yaswanth is mass");
-            
+            sw.Write("Yaswanth");
+            Console.WriteLine("writen name");
             sw.Close();
             fs.Close();
         }
@@ -86,7 +92,7 @@ namespace CS_Practice4
             }
         }
 
-        public static async void Firstmethod()
+        public static async Task Firstmethod()
         {
             await Task.Run(() =>
             {
@@ -97,7 +103,7 @@ namespace CS_Practice4
             Console.WriteLine("Method1");
         }
 
-        public static async void Secondmethod()
+        public static async Task Secondmethod()
         {
             string msg = await Thirdmethod();
             Console.WriteLine("Method2 "+msg);
