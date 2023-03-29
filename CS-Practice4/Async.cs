@@ -10,8 +10,11 @@ namespace CS_Practice4
     {
         public AsyncClass()
         {
-            Firstmethod();
+           // Firstmethod();
+           
+            Thirdmethod();
             Secondmethod();
+            Fourthmethod();
             Console.ReadLine();
         }
 
@@ -28,7 +31,19 @@ namespace CS_Practice4
 
         public static async void Secondmethod()
         {
-            Console.WriteLine("Method2");
+            string msg = await Thirdmethod();
+            Console.WriteLine("Method2 "+msg);
+        }
+
+        public static async Task<string> Thirdmethod()
+        {
+            await Task.Delay(5000);
+            Console.WriteLine("inthird method");
+            return "THirdMethod";
+        }
+        public static void Fourthmethod()
+        {
+            Console.WriteLine("In method4");
         }
     }
 }
