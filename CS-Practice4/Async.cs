@@ -32,7 +32,10 @@ namespace CS_Practice4
         {
             Task t1 = Firstmethod();
             Task t2 = Secondmethod();
-            await Task.WhenAll(t1, t2);
+            await Task.WhenAll(t1, t2).ContinueWith(_ =>
+            {
+                Console.WriteLine("both tasks have completed");
+            });
             Fourthmethod();
         }
 
