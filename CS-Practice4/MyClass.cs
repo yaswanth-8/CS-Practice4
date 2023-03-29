@@ -11,8 +11,12 @@ namespace CS_Practice4
     {
         public MyClass()
         {
-            Action<string> print1 = (msg) => Console.Write(msg);
-            print1("Hi Yaswanth");
+            Action<int> print1 = (msg) => Console.Write(msg);
+            //print1("Hi Yaswanth");
+            Console.WriteLine("--------------------");
+            Func<int, int, int> print2 = (a, b) => a + b;
+            int sum = print2(1, 2);
+            print1(sum);
         }
         /*public void print()
         {
