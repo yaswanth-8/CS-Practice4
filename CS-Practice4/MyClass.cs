@@ -18,8 +18,9 @@ namespace CS_Practice4
            int sum = print2(1, 2);
             print1(sum);
             Console.WriteLine("--------------------");
-            Predicate<int> pd = (a) => a > 3;
+            Predicate<int> pd = (a) => a > 3; //FindAll(x=>x>2;); is also a predicate
             Console.WriteLine(pd(5));
+           
         }
         
     }

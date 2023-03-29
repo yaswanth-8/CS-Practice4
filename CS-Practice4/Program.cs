@@ -38,6 +38,6 @@ class Program
         int count = numbers.Count(x=>x%2==0);
         Console.WriteLine(count);*/
 
-        MyClass myClass = new MyClass();
+        AsyncClass myClass = new AsyncClass();
     }
 }
