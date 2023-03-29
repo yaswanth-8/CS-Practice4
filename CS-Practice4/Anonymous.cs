@@ -85,7 +85,7 @@ namespace CS_Practice4
             Console.WriteLine("----------------------");
         }
     }
-
+    
     class Student {
     
         public string name { get; set; }
@@ -93,7 +93,7 @@ namespace CS_Practice4
         public string dept { get; set; }
         public int age { get; set; }
 
-    
+        
     }
 
 
