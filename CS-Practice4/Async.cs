@@ -17,11 +17,51 @@ namespace CS_Practice4
              Fourthmethod();
              Console.ReadLine();*/
 
+            /*
+                        iteratingFunction();
+                        printingFunction();
+                        Console.ReadLine();*/
 
-            iteratingFunction();
-            printingFunction();
+             openFile();
             Console.ReadLine();
+
         }
+
+
+         async void openFile()
+        {
+           await Task.Run( ( )  =>
+           {
+
+
+               Console.WriteLine("inside run");
+               FileStream fs = new FileStream("D:\\C#\\file1.txt", FileMode.OpenOrCreate);
+
+               Console.WriteLine("File1 is opened");
+
+               writeFile(fs);
+           
+           });
+           
+           
+        }
+
+        public void writeFile(FileStream fs)
+        {
+            StreamWriter sw = new StreamWriter(fs);
+            sw.Write("Yaswanth is mass");
+            
+            sw.Close();
+            fs.Close();
+        }
+
+
+
+
+
+
+
+
 
         static async void iteratingFunction()
         {
@@ -45,34 +85,6 @@ namespace CS_Practice4
                 Console.WriteLine("Printing function");
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         public static async void Firstmethod()
         {
